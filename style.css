@@ -1,0 +1,156 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto, sans-serif";
+  font-size: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 22px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "oswald", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+*::selection {
+  background-color: rgb(246, 236, 236);
+}
+
+.header {
+  padding: 2rem 2rem;
+  padding-top: 4rem;
+  text-align: center;
+  background-color: rgb(246, 236, 236);
+  position: relative;
+}
+
+.heading-group {
+  font-size: 5rem;
+}
+
+.main-heading {
+  font-size: 2em;
+}
+
+.profession {
+  font-size: 0.5em;
+}
+
+.profession::after {
+  content: "👩‍💻";
+}
+
+.hire-me {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: rgb(210, 245, 210);
+  color: black;
+}
+
+@media screen and (min-width: 992px) {
+  .hire-me {
+    position: fixed;
+  }
+}
+
+@media sprint {
+  .hire-me {
+    display: none;
+  }
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .navigation {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.nav-link {
+  padding: 2rem 1rem;
+  color: black;
+}
+
+.nav-link:hover {
+  background-color: lightgray;
+  color: black;
+}
+
+.nav-link:active {
+  color: rgb(242, 231, 231);
+  background-color: grey;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-link + .nav-link {
+    margin-left: 1rem;
+  }
+}
+
+.main {
+  max-width: 65ch;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.main > * + * {
+  margin-top: 3rem;
+}
+
+.main > * {
+  border-top: 0.25rem solid grey;
+}
+
+.main > *:first-child {
+  border-top: none;
+}
+
+.arcticle-heading {
+  position: relative;
+  left: 0.125rem;
+}
+
+.experience-header {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .experience-header {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}
