@@ -114,6 +114,10 @@ a:active {
 }
 
 .navigation {
+  display: none;
+}
+
+.navigation {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -164,23 +168,44 @@ a:active {
   padding: 1rem;
 }
 
+@media screen and (min-width: 768px) {
+  .main {
+    max-width: 80ch;
+  }
+}
+
 .main > * + * {
   margin-top: 3rem;
 }
 
 @media screen and (min-width: 768px) {
   .main > * + * {
-    margin-top: 5rem;
+    margin-top: 8rem;
   }
 }
 
-.main > * {
-  border-top: 0.25rem solid grey;
-  padding: 0 1rem;
+.main > *:first-child {
+  margin-top: 4rem;
 }
 
 .main > *:first-child {
   border-top: none;
+}
+
+.main-article {
+  border-top: 0.5rem solid var(--accent-color);
+  padding: 0 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .main-article {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+  }
+
+  .main-article-content {
+    margin-top: 3rem;
+  }
 }
 
 .arcticle-heading {
