@@ -33,8 +33,9 @@ h6 {
 body {
   --background-color: lightgrey;
   --text-color: black;
-  --accent-color: rgb(241, 162, 241);
-  --nav-link-active-bg-color: rgb(121, 43, 121);
+  --accent-color: rgb(226, 104, 226);
+  --accent-text-color: black;
+  --nav-link-active-bg-color: rgb(245, 232, 245);
 
   margin: 0;
   background-color: var(--background-color);
@@ -54,7 +55,7 @@ a:active {
 }
 
 .header {
-  padding: 2rem 2rem;
+  padding: 3rem 1rem;
   padding-top: 4rem;
   text-align: center;
   background-image: linear-gradient(
@@ -67,7 +68,7 @@ a:active {
 }
 
 .heading-group {
-  font-size: 5rem;
+  font-size: 4rem;
 }
 
 .main-heading {
@@ -84,11 +85,20 @@ a:active {
 
 .hire-me {
   position: absolute;
-  right: 2rem;
-  top: 2rem;
+  right: 1rem;
+  top: 1rem;
   padding: 1rem;
   border-radius: 0.5rem;
+  opacity: 0.5;
   background: var(--accent-color);
+  transform-origin: top right;
+  transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+}
+
+.header:hover .hire-me,
+.header:focus-within .hire-me {
+  opacity: 1;
+  transform: scale(1.5);
 }
 
 @media screen and (min-width: 992px) {
@@ -117,9 +127,9 @@ a:active {
 }
 
 .nav-link {
-  padding: 2rem 1rem;
+  padding: 0.2rem 0.5rem;
   color: var(--accent-text-color);
-  transition: background-color 0, 5s ease-in-out;
+  transition: background-color 0.25s ease-in-out;
 }
 
 .nav-link:hover {
@@ -149,7 +159,7 @@ a:active {
 }
 
 .main {
-  max-width: 65ch;
+  max-width: 60ch;
   margin: 0 auto;
   padding: 1rem;
 }
@@ -160,7 +170,7 @@ a:active {
 
 @media screen and (min-width: 768px) {
   .main > * + * {
-    margin-top: 4rem;
+    margin-top: 5rem;
   }
 }
 
@@ -175,7 +185,7 @@ a:active {
 
 .arcticle-heading {
   position: relative;
-  left: 0.125rem;
+  left: -1rem;
 }
 
 .experience-header {
